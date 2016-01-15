@@ -1,6 +1,8 @@
 # Custom Signon Page for 2 Targets
 
-## Installation
+This is a customized PeopleSoft signon page that let's you log into 2 different applications. 
+
+## Installation 
 
 1. Copy the `psadmin.html` file to `PORTAL.war/WEB_INF/psftdocs/[domain]`. 
 2. Add the custom text and URLs to the `text.properties` file in `PORTAL.war/WEB_INF/psftdocs/[domain]`. 
@@ -11,4 +13,9 @@
     3. Logout Page
 1. Save the Web Profile and restart the web server
 
+## Configuration
+
+In the `text.properties` file, change the `9000` and `9001` values for your URLs. 
+
+Value `8999` will change the header above the Username and Password boxes. This field can be used for the environment name.
 
