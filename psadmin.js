@@ -99,10 +99,30 @@ function hideLogin(isHidden) {
 		document.getElementById('signon').style.display = "block";
 	}
 }
+
+/* Toggle HR Button Backdoor*/
+function hideHRLogin(isHidden) {
+	if (isHidden) {
+        	document.getElementById('hrdev').disabled = true;
+	} else {
+        	document.getElementById('hrdev').disabled = false;
+	}
+}
+
+/* Toggle FS Button Backdoor*/
+function hideFSLogin(isHidden) {
+	if (isHidden) {
+        	document.getElementById('fsdev').disabled = true;
+	} else {
+        	document.getElementById('fsdev').disabled = false;
+	}
+}
+
+
 /* define a handler */
 function doc_keyUp(e) {
 /* http://www.javascripter.net/faq/keycodes.htm */
-	if (e.ctrlKey && e.keyCode == 192) {hideLogin(false);} 	/* Ctrl+Tick */
+	if (e.ctrlKey && e.keyCode == 192) {hideLogin(false);hideHRLogin(false);hideFSLogin(false);} 	/* Ctrl+Tick */
 }
 /* register the handler */
 document.addEventListener('keyup', doc_keyUp, false);
