@@ -19,3 +19,14 @@ In the `text.properties` file, change the `9000` and `9001` values for your URLs
 
 Value `8999` will change the header above the Username and Password boxes. This field can be used for the environment name.
 
+## Maintenance Mode
+
+WebProfile options you can set: 
+
+Property Name | Validation Type | Property Value
+---------------- | ----------------- | ---------------
+maintMode | String | false
+**maintModeHR** | String | true
+**maintModeFS** | String | false
+
+`maintMode` will disable the entire login box until the special key combination is hit (see `psadmin.js`). The two bolded options let you disable individual buttons instead of the entire login box.
