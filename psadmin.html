@@ -39,7 +39,7 @@
 			}
 		</style>
 	</head>
-	<body onload="setErrorImg(); clearRecentSearch(); hideLogin(false);">
+	<body onload="setErrorImg(); clearRecentSearch(); hideLogin(<%=maintMode%>); hideHRLogin(<%=maintModeHR%>); hideFSLogin(<%=maintModeFS%>);">
 		 &nbsp;
     <div class="container theme-showcase">
         <div class="header">
