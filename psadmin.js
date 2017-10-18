@@ -124,5 +124,22 @@ function doc_keyUp(e) {
 /* http://www.javascripter.net/faq/keycodes.htm */
 	if (e.ctrlKey && e.keyCode == 192) {hideLogin(false);hideHRLogin(false);hideFSLogin(false);} 	/* Ctrl+Tick */
 }
+
+/* jQuery */
+$(document).ready(function() {
+
+  $('form:first *:input[type!=hidden]:first').focus();
+  $("#envSelector").on('shown.bs.modal', function(event) {
+    // set focus on HR button
+    $("#login-hr").focus();
+	});
+});
+
+/* formEnter */
+function formEnter() { 
+  $('#envSelector').modal('show');
+  return false;
+};
+
 /* register the handler */
 document.addEventListener('keyup', doc_keyUp, false);
